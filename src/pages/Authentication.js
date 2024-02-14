@@ -1,5 +1,6 @@
 import { json, redirect } from 'react-router-dom';
 import AuthForm from '../components/AuthForm';
+import { localURL } from '../respURL'
 
 function AuthenticationPage() {
   return (
@@ -25,7 +26,7 @@ export const action = async ({ request }) => {
     password: data.get('password')
   }
 
-  const response = await fetch('https://auth-router-bsqr.onrender.com/' + mode, {
+  const response = await fetch(localURL + mode, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -44,10 +45,10 @@ export const action = async ({ request }) => {
   const resData = await response.json();
   const token = resData.token;
 
-  localStorage.setItem('token' , token);
+  localStorage.setItem('token', token);
 
   const expiration = new Date();
-  expiration.setHours(expiration.getHours() +1);
+  expiration.setHours(expiration.getHours() + 1);
   localStorage.setItem('expiration', expiration.toISOString());
   // soon: manage that token
   return redirect('/');

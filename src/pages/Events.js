@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { useLoaderData, json, defer, Await } from 'react-router-dom';
 
 import EventsList from '../components/EventsList';
+import { localURL } from '../respURL';
 
 function EventsPage() {
   const { events } = useLoaderData();
@@ -18,7 +19,7 @@ function EventsPage() {
 export default EventsPage;
 
 async function loadEvents() {
-  const response = await fetch('https://auth-router-bsqr.onrender.com/events');
+  const response = await fetch(localURL+'events');
 
   if (!response.ok) {
     // return { isError: true, message: 'Could not fetch events.' };

@@ -10,6 +10,7 @@ import {
 import EventItem from '../components/EventItem';
 import EventsList from '../components/EventsList';
 import { getAuthToken } from '../util/auth';
+import { localURL } from '../respURL';
 
 function EventDetailPage() {
   const { event, events } = useRouteLoaderData('event-detail');
@@ -33,7 +34,7 @@ function EventDetailPage() {
 export default EventDetailPage;
 
 async function loadEvent(id) {
-  const response = await fetch('https://auth-router-bsqr.onrender.com/events/' + id);
+  const response = await fetch(localURL+'events/' + id);
 
   if (!response.ok) {
     throw json(
@@ -49,7 +50,7 @@ async function loadEvent(id) {
 }
 
 async function loadEvents() {
-  const response = await fetch('https://auth-router-bsqr.onrender.com/events');
+  const response = await fetch(localURL+'events');
 
   if (!response.ok) {
     // return { isError: true, message: 'Could not fetch events.' };
@@ -80,7 +81,7 @@ export async function loader({ request, params }) {
 export async function action({ params, request }) {
   const eventId = params.eventId;
   const token= getAuthToken();
-  const response = await fetch('https://auth-router-bsqr.onrender.com/events/' + eventId, {
+  const response = await fetch(localURL+'events/' + eventId, {
     method: request.method,
     headers: {
       'Authorization': 'Bearer '+ token

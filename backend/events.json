@@ -1,1 +1,25 @@
-{"events":[{"title":"Astro Love","image":"https://images.pexels.com/photos/2034892/pexels-photo-2034892.jpeg","date":"2021-10-28","description":"MG, Brasil\nBlack Telescope Under Blue and Blacksky","id":"8aa5bbd4-5509-4fe6-b579-8ac7db3193c3"},{"title":"Sun Mountain","image":"https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg","date":"2020-10-29","description":"Alleghe, Veneto, Italy\nSnow Covered Mountain during Sunrise","id":"6be7cdec-cf9e-49c2-9e2a-74b7eecb590b"}],"users":[{"email":"a@b.com","password":"$2a$12$FoG2wGKmvCjpXlw.lN.RBuuhSMBgJ8fpb//2s0URYQgW8RvDgjdwW","id":"583712bc-138c-4df0-9347-f35cd7f08570"}]}
+{
+    "events": [
+        {
+            "title": "Astro Love",
+            "image": "https://images.pexels.com/photos/2034892/pexels-photo-2034892.jpeg",
+            "date": "2021-10-28",
+            "description": "MG, Brasil\nBlack Telescope Under Blue and Blackskies",
+            "id": "8aa5bbd4-5509-4fe6-b579-8ac7db3193c3"
+        },
+        {
+            "title": "Sun Mountain",
+            "image": "https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg",
+            "date": "2020-10-29",
+            "description": "Alleghe, Veneto, Italy\nSnow Covered Mountain during Sunrise",
+            "id": "6be7cdec-cf9e-49c2-9e2a-74b7eecb590b"
+        }
+    ],
+    "users": [
+        {
+            "email": "a@b.com",
+            "password": "$2a$12$FoG2wGKmvCjpXlw.lN.RBuuhSMBgJ8fpb//2s0URYQgW8RvDgjdwW",
+            "id": "583712bc-138c-4df0-9347-f35cd7f08570"
+        }
+    ]
+}
