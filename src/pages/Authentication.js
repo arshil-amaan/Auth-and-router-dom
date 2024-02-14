@@ -25,7 +25,7 @@ export const action = async ({ request }) => {
     password: data.get('password')
   }
 
-  const response = await fetch('http://localhost:8080/' + mode, {
+  const response = await fetch('https://auth-router-bsqr.onrender.com/' + mode, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
